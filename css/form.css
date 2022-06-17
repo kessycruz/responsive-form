@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --accent-blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%) ;
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+body {
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--primary-red);
+}
+a{
+  text-decoration: none;
+  color: var(--primary-red);
+  cursor: pointer;
+}
+.header-bg{
+  /*background-image: url('images/bg-intro-desktop.png');*/
+  position: absolute;
+  background-size: cover;
+  background-repeat: none;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+} 
+.hero{
+  height: 600px; 
+  position: relative;
+}
+.hero-text{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.hero h1{
+  font-weight: 700;
+}
+.hero p{
+  margin: 20px 0;
+}
+.hero .grid{
+  grid-template-columns: 50%, 50%;
+  gap: 30px;
+}
+
+/*form*/
+.hero-form{
+  top: 40px;
+  height: 350px; 
+  width: 450px;
+}
+.form-header{
+  background-color: var(--accent-blue);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: 0 4px 2px -2px var(--dark-blue);
+}
+
+input[type ='text'],
+input[type ='password'],
+input[type = 'email'],
+input[type='submit']{
+    border: 1px solid #DDDDDD;
+    width: 100%;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 4px;
+    font-size: 10px;
+ }
+input[type='submit'] {
+    background-color: var(--primary-green);
+    color: #fff;
+    width: 100%;
+    border: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+input:focus{
+    outline-color: var(--grayish-blue);
+}
+.foot-note {
+    font-size: 12px;
+    text-align: center;
+    color: var(--grayish-blue);   
+}
+
+/*Utilities*/
+.container{
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 80px;
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.card{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  margin: 10px;
+}
+
+/*media Queries*/
+@media (max-width:760px ) {
+  .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .hero{
+    margin-top: 40px;
+    height: 100%;
+  }
+  .hero-form{
+      height: auto;
+      width: 100%;
+  }
+  .hero p{
+        margin: 10px;
+  }
+  .container{
+      padding: 40px;
+  }
+  .hero-text{
+    padding: 0;
+}
+}
+
+@media (max-width:375px) {
+  .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .hero{
+    margin-top: 40px;
+    height: 100%;
+  }
+  .hero-form{
+    height: auto;
+    width: 100%;
+}
+.hero p{
+      margin: 10px;
+}
+.container{
+    padding: 40px;
+}
+.hero-text{
+    padding: 0;
+}
+}
