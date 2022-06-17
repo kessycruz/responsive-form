@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -22,7 +23,6 @@ a{
   cursor: pointer;
 }
 .header-bg{
-  /*background-image: url('images/bg-intro-desktop.png');*/
   position: absolute;
   background-size: cover;
   background-repeat: none;
@@ -39,6 +39,7 @@ a{
     padding-right: 50px;
 }
 .hero h1{
+  font-size: 36px;
   font-weight: 700;
 }
 .hero p{
@@ -58,7 +59,7 @@ a{
 .form-header{
   background-color: var(--accent-blue);
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 15px;
   text-align: center;
   box-shadow: 0 4px 2px -2px var(--dark-blue);
@@ -70,7 +71,7 @@ input[type = 'email'],
 input[type='submit']{
     border: 1px solid #DDDDDD;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin: 4px;
     border-radius: 4px;
     font-size: 10px;
@@ -80,14 +81,16 @@ input[type='submit'] {
     color: #fff;
     width: 100%;
     border: 0;
+    padding: 12px;
     text-transform: uppercase;
     cursor: pointer;
 }
 input:focus{
     outline-color: var(--grayish-blue);
 }
+
 .foot-note {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     color: var(--grayish-blue);   
 }
@@ -144,6 +147,7 @@ input:focus{
   }
   .hero-text{
     padding: 0;
+    width: 100%;
 }
 }
 
@@ -168,5 +172,6 @@ input:focus{
 }
 .hero-text{
     padding: 0;
+    width: 100%;
 }
 }

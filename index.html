@@ -6,6 +6,52 @@
     <title>Responsive Form</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' media='screen' href='css/form.css'>
+ <!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById("myForm").onsubmit = function () {
+    var x = document.forms["myForm"]["fname"].value;
+    var x1 = document.forms["myForm"]["lname"].value;
+    var y = document.forms["myForm"]["email"].value;
+    var z = document.forms["myForm"]["password"].value;
+
+    var submit = true;
+
+    if (x == null || x == "") {
+        nameError = "First name cannot be empty";
+        document.getElementById("fname_error").innerHTML = nameError;
+        submit = false;
+    }
+
+    if (x1 == null || x1 == "") {
+        nameError = "Last name cannot be empty";
+        document.getElementById("lname_error").innerHTML = nameError;
+        submit = false;
+    }
+
+    if (y == null || y == "") {
+        emailError = "Looks like this is not an email";
+        document.getElementById("email_error").innerHTML = emailError;
+        submit = false;
+    }
+
+    if (z == null || z == "") {
+        telephoneError = "Password cannot be empty";
+        document.getElementById("password_error").innerHTML = telephoneError;
+        submit = false;
+    }
+
+    return submit;
+}
+function removeWarning() {
+document.getElementById(this.id + "_error").innerHTML = "";
+}
+
+document.getElementById("fname").onkeyup = removeWarning;
+document.getElementById("lname").onkeyup = removeWarning;
+document.getElementById("email").onkeyup = removeWarning;
+document.getElementById("password").onkeyup = removeWarning;
+    })
+    </script>-->
 </head>
 <body>
     <main>
@@ -31,22 +77,25 @@
                 <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
               </div>
               <div class="card">
-                <form>
+                <form method="post" name="myForm" id="myForm">
                     <div class="form-control">
-                        <input type="text" id="fname" name="fname" placeholder="First Name" required><br>
+                        <input type="text" id="fname" name="fname" aria-describedby="name-format" placeholder="First Name" required><br>
+                        
                         <input type="text" id="lname" name="lname" placeholder= "Last Name" required><br>
-                        <input type="email" id="email" name="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]" required><br>
+                           
+                        <input type="email" id="email" name="email" placeholder="Email Address" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;" required><br>
+                            
                         <input type="password" id="password" name="password" placeholder="Password" required><br>
+                           
                         <input type="submit" value="Claim your free trial">
                         <p class="foot-note">By clicking the button you have agreed to our <a href="#">Terms and Services</a></p>
                     </div>      
                 </form>
-            </div><!--end of signup-->
-          </div><!--end of form-header-->
-         
+            </div><!--end of card-->
+          </div><!--end of head-form-->
            </div>
       </section>
     </main>
-
+    
 </body>
 </html>
