@@ -35,34 +35,30 @@ a{
   position: relative;
 }
 .hero-text{
-    padding-left: 50px;
-    padding-right: 50px;
+    flex-wrap: wrap;
+    width: 400px;
 }
 .hero h1{
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
+  width: auto;
 }
 .hero p{
-  margin: 20px 0;
-}
-.hero .grid{
-  grid-template-columns: 50%, 50%;
-  gap: 30px;
+  margin:15px 0;
 }
 
 /*form*/
 .hero-form{
   top: 40px;
-  height: 350px; 
-  width: 450px;
+  width: 400px;
 }
 .form-header{
   background-color: var(--accent-blue);
   border-radius: 5px;
-  padding: 5px;
+  padding: 4px;
   margin-bottom: 15px;
   text-align: center;
-  box-shadow: 0 4px 2px -2px var(--dark-blue);
+  box-shadow: 0 4px 3px -2px var(--dark-blue);
 }
 
 input[type ='text'],
@@ -88,21 +84,62 @@ input[type='submit'] {
 input:focus{
     outline-color: var(--grayish-blue);
 }
+.form-control{
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.form-control i{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+.form-control.success i.fa-check-circle{
+  color: #5bba2c;
+  visibility: visible;
+}
+.form-control.error i.fa-exclamation-circle{
+  color: #e82513;
+  visibility: visible;
+}
+.form-control small{
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.form-control.error small{
+  color: #e82513;
+  visibility: visible;
+  font-size: 9px;
+}
+.form-control.success input{
+  border-color: #5bba23;
+}
+.form-control .error input{
+  border-color: #e82513;
+}
 
 .foot-note {
-    font-size: 10px;
+    font-size: 9px;
     text-align: center;
     color: var(--grayish-blue);   
 }
 
+
 /*Utilities*/
 .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
   max-width: 1440px;
   overflow: hidden;
-  margin: 0 auto;
-  padding: 80px;
+  padding: 70px;
 }
-.flex{
+/*.flex{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +152,7 @@ input:focus{
   justify-content: center;
   align-items: center;
   height: 100%;
-}
+}*/
 .card{
   background-color: #fff;
   padding: 20px;
@@ -126,52 +163,23 @@ input:focus{
 }
 
 /*media Queries*/
-@media (max-width:760px ) {
-  .grid{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-  .hero{
-    margin-top: 40px;
-    height: 100%;
-  }
-  .hero-form{
-      height: auto;
-      width: 100%;
-  }
-  .hero p{
-        margin: 10px;
-  }
+@media only screen and (min-width: 375px) and (max-width: 600px){
   .container{
-      padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
   }
   .hero-text{
     padding: 0;
-    width: 100%;
-}
-}
-
-@media (max-width:375px) {
-  .grid{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-  .hero{
-    margin-top: 40px;
-    height: 100%;
+    margin: 0;
   }
   .hero-form{
-    height: auto;
     width: 100%;
-}
-.hero p{
-      margin: 10px;
-}
-.container{
-    padding: 40px;
-}
-.hero-text{
-    padding: 0;
-    width: 100%;
-}
+    padding-right:20px;
+    padding-left: 20px;
+  }
 }
