@@ -1,185 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
+
 :root{
     --primary-red: hsl(0, 100%, 74%);
     --primary-green: hsl(154, 59%, 51%);
     --accent-blue: hsl(248, 32%, 49%);
     --dark-blue: hsl(249, 10%, 26%) ;
     --grayish-blue: hsl(246, 25%, 77%);
+    --text-color: hsl(252, 45%, 98%);
 }
+
 body {
-    font-family: 'Poppins';
-    font-size: 16px;
-    color: #fff;
-    background-color: var(--primary-red);
-}
-a{
-  text-decoration: none;
-  color: var(--primary-red);
-  cursor: pointer;
-}
-.header-bg{
-  position: absolute;
-  background-size: cover;
-  background-repeat: none;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  width: 100%;
-} 
-.hero{
-  height: 600px; 
-  position: relative;
-}
-.hero-text{
-    flex-wrap: wrap;
-    width: 400px;
-}
-.hero h1{
-  font-size: 30px;
-  font-weight: 700;
-  width: auto;
-}
-.hero p{
-  margin:15px 0;
-}
-
-/*form*/
-.hero-form{
-  top: 40px;
-  width: 400px;
-}
-.form-header{
-  background-color: var(--accent-blue);
-  border-radius: 5px;
-  padding: 4px;
-  margin-bottom: 15px;
-  text-align: center;
-  box-shadow: 0 4px 3px -2px var(--dark-blue);
-}
-
-input[type ='text'],
-input[type ='password'],
-input[type = 'email'],
-input[type='submit']{
-    border: 1px solid #DDDDDD;
-    width: 100%;
-    padding: 10px;
-    margin: 4px;
-    border-radius: 4px;
-    font-size: 10px;
- }
-input[type='submit'] {
-    background-color: var(--primary-green);
-    color: #fff;
-    width: 100%;
-    border: 0;
-    padding: 12px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-input:focus{
-    outline-color: var(--grayish-blue);
-}
-.form-control{
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-  position: relative;
-}
-.form-control i{
-  position: absolute;
-  top: 40px;
-  right: 10px;
-  visibility: hidden;
-}
-.form-control.success i.fa-check-circle{
-  color: #5bba2c;
-  visibility: visible;
-}
-.form-control.error i.fa-exclamation-circle{
-  color: #e82513;
-  visibility: visible;
-}
-.form-control small{
-  visibility: hidden;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.form-control.error small{
-  color: #e82513;
-  visibility: visible;
-  font-size: 9px;
-}
-.form-control.success input{
-  border-color: #5bba23;
-}
-.form-control .error input{
-  border-color: #e82513;
-}
-
-.foot-note {
-    font-size: 9px;
-    text-align: center;
-    color: var(--grayish-blue);   
-}
-
-
-/*Utilities*/
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-color: var(--primary-red);
+  font-family: Poppins;
+  font-size: 16px;
   max-width: 1440px;
-  overflow: hidden;
-  padding: 70px;
-}
-/*.flex{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-.grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}*/
-.card{
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  margin: 10px;
+  width: 85%;
+  margin: 0 auto;
 }
 
-/*media Queries*/
+main {
+  min-height: 90vh;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  color: var(--text-color);
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  font-size: 2.7rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.hero-text p {
+  width: 70%;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.hero-form {
+  width: 70%;
+}
+
+.form-header {
+  box-shadow: 0 5px rgba(0, 0, 0, 0.219);
+  background-color: var(--accent-blue);
+  color: var(--text-color);
+  padding: 15px;
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.form-header{
+  font-weight: 600;
+}
+
+.form-wrapper {
+  box-shadow: 0 5px rgba(0, 0, 0, 0.219);
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 30px;
+}
+
+::placeholder {
+  color: var(--grayish-blue);
+  font-weight: 400;
+}
+
+form p {
+  color: var(--grayish-blue);
+}
+
+form a {
+  color: var(--primary-red);
+}
+input,
+button {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 18px 0;
+  display: inline-block;
+  border: 1px solid var(--grayish-blue);
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--primary-green);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--primary-green);
+}
+
+.terms {
+  font-size: 10px;
+  text-align: center;
+}
+
+.form-text {
+  font-size: 12px;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.dim {
+  color: hsl(0, 19%, 91%);
+  font-weight: 100;
+}
+
+/* Error Message*/
+
+.error {
+  display: none;
+}
+
+input:invalid:focus {
+  outline: none;
+  border: none;
+  border: 1px solid var(--primary-red);
+  background-image: url(../images/error.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+}
+
+input:required:focus ~ .error {
+  display: block;
+  color: var(--primary-red);
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+}
+
+
 @media only screen and (min-width: 375px) and (max-width: 600px){
-  .container{
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main {
+    min-height: 90vh;
+    width: 100%;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
     text-align: center;
-    margin-top: 30px;
   }
-  .hero-text{
-    padding: 0;
-    margin: 0;
+
+  body {
+    background-image: url(../images/bg-intro-mobile.png);
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 4rem 0;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    margin: 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-text p {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 100;
+    margin: auto;
+    line-height: 1.8;
   }
   .hero-form{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding-right:20px;
-    padding-left: 20px;
+    margin: 0 30px 0 30px;
+    padding: 0 30px 0 30px;
+  }
+  .form-header{
+    padding: 20px;
+  }
+  .form {
+    margin-bottom: 5rem 0;
+    width: 100%;
   }
 }
